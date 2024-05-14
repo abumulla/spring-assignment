@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+       <bean id="softwareDeveloper" class="com.example.spring_concepts.impl.SoftwareDeveloper">
+              <property name="this1" ref="this1"/>
+       </bean>
+
+       <bean id="softwareTester" class="com.example.spring_concepts.impl.SoftwareTester">
+              <constructor-arg ref="this1" />
+       </bean>
+
+       <bean id="this1" class="com.example.spring_concepts.impl.This" />
+</beans>
