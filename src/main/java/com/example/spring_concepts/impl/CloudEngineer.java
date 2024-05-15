@@ -28,6 +28,7 @@ public class CloudEngineer implements Employee{
         return this.thbs.getCompName();
     }
 
+    // setter injection
     @Autowired
     public void setThbs(Thbs thbs) {
         this.thbs = thbs;

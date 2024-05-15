@@ -41,10 +41,14 @@ public class SpringConceptsApplication {
 		Employee cloudEngineer = applicationContext2.getBean(CloudEngineer.class);
 		System.out.println(cloudEngineer.toString());
 
+		System.out.println("\n##################################################################################\n");
+		// field injection 
+		TrialAutowire trialAutowire = applicationContext2.getBean(TrialAutowire.class);
+		System.out.println(trialAutowire.getDetails());
+		
 		// closing the resources of ApplicationContext
 		applicationContext1.close();
 		applicationContext2.close();
-		
 	}
 
 }

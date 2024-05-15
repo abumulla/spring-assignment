@@ -3,6 +3,7 @@ package com.example.spring_concepts.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.example.spring_concepts.TrialAutowire;
 import com.example.spring_concepts.impl.CloudEngineer;
 import com.example.spring_concepts.impl.DevopsEngineer;
 import com.example.spring_concepts.impl.Thbs;
@@ -26,5 +27,10 @@ public class AppConfig {
     public CloudEngineer cloudEngineer(){
         System.out.println("###CloudEngineer bean loaded in container###");
         return new CloudEngineer();
+    }
+
+    @Bean
+    public TrialAutowire trialAutowire(){
+        return new TrialAutowire();
     }
 }
